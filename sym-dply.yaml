@@ -1,7 +1,7 @@
 apiVersion: apps/v1 #La versión de la API que vamos a usar; en este caso la v1.
 kind: Deployment #La clase de recurso que estamos definiendo; en este caso un deployment.
 metadata: #Información que nos permite identificar unívocamente el recurso.
-  name: symfony-deployment-final #Nombre del pod
+  name: symfony-deployment-final #Nombre del pod, replicaset y deployment
   labels: #Permiten etiquetar los recursos de Kubernetes con información del tipo clave/valor.
     app: symfony
     type: framework
