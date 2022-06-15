@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service #La clase de recurso que estamos definiendo; en este caso un servicio.
+metadata:
+  name: mariadb-service #Nombre del servicio
+  labels:
+    app: symfony
+    type: database
+spec:
+  selector:
+    app: symfony
+    type: database
+  ports: #Definimos el puerto por el que va a ofrecer el Service y lo nombramos
+  - port: 3306
+    targetPort: db-port
+  type: ClusterIP #El tipo de servicio, este es para conexiones internas

@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  bd_dbname: symfony #Nombre de la base de datos
+  bd_user: juan #Nombre del usuario normal
+kind: ConfigMap #La clase de recurso que estamos definiendo; en este caso un configmap.
+metadata:
+  creationTimestamp: null
+  name: bd-datos

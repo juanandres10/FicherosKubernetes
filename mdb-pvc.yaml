@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: PersistentVolumeClaim #La clase de recurso que estamos definiendo; en este caso un volumen persistente.
+metadata:
+    name: mariadb-pvc #Nombre del volumen
+spec:
+  accessModes: #El modo de acceso.
+    - ReadWriteOnce #Sera de lectura y escritura para un nodo.
+  resources:
+    requests:
+      storage: 5Gi #Tamaño del volumen

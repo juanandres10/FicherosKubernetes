@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service #La clase de recurso que estamos definiendo; en este caso un servicio.
+metadata:
+  name: symfony-service #Nombre del servicio
+  labels:
+    app: symfony
+    type: framework
+spec:
+  selector:
+    app: symfony
+    type: framework
+  ports: #Definimos el puerto por el que va a ofrecer el Service y lo nombramos
+  - name: http-sv-port 
+    port: 80
+    targetPort: http-port
+  - name: https-sv-port
+    port: 443
+    targetPort: https-port
+  type: NodePort #El tipo de servicio, este es para poder conectarnos desde el exterior.
